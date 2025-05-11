@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SHIELD: Submission Listing</title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="module" src="/admin/Admin_view.js" defer></script>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        background: url("/Background/back5.jpg") no-repeat center center fixed;
+        background-size: cover;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 80px auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 30px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+
+      th, td {
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Submission Listing</h1>
+      <table>
+        <thead>
+          <tr id="headings">
+            <th>DB ID</th>
+            <th>SHIELD ID</th>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody id="table"></tbody>
+      </table>
+      <form method="get" action="/admin/index.html">
+        <button type="submit">Home</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SHIELD: Create an Account</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        background: url("/Background/back2.jpg") no-repeat center center fixed;
+        background-size: cover;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        text-align: center;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      form {
+        margin-top: 20px;
+        text-align: left;
+      }
+
+      form div {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input, select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Create an Account</h1>
+      <p>Fill out the info below on the account to be created:</p>
+      <form method="post" action="/admin/createAcct">
+        <div>
+          <label>Username</label>
+          <input id="username" type="text" name="username" required minlength="4" maxlength="10"
+            title="Username must be 4-20 characters, letters, numbers, or underscores only"
+            pattern="^[a-zA-Z0-9_]+$">
+        </div>
+        <div>
+          <label>Password</label>
+          <input id="password" type="password" name="password" required minlength="4" maxlength="10"
+            title="Password must be 4-20 characters, letters, numbers, or underscores only"
+            pattern="^[a-zA-Z0-9_]+$">
+        </div>
+        <div>
+          <label>SHIELD ID</label>
+          <input id="ShieldID" type="text" name="ShieldID" required minlength="9" maxlength="9"
+            title="SHIELD ID must be exactly 9 digits"
+            pattern="^\d{9}$">
+        </div>
+        <div>
+          <label>Name</label>
+          <input id="name" type="text" name="name" required minlength="4" maxlength="20"
+            title="Name must be 4-20 letters only"
+            pattern="^[a-zA-Z ]+$">
+        </div>
+        <div>
+          <label>Access:</label>
+          <select id="access" name="access">
+            <option value="employee">Worker</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+        <div style="text-align: center;">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

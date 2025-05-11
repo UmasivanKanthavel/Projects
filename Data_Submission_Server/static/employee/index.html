@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SHEILD FILE : Upload</title>
+    <script type="module" src="/employee/upload_script.js"></script>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        background: url("/Background/shield_background.jpg") no-repeat center center fixed;
+        background-size: cover;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      form {
+        margin-top: 20px;
+      }
+
+      input[type="file"]::-webkit-file-upload-button {
+        visibility: visible;
+      }
+
+      input[type="file"] {
+        color: transparent; 
+        width: 130px;    
+        margin-left: 50px;
+        margin-bottom: 10px; 
+        overflow: hidden;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      #analysis {
+        margin-top: 30px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Upload Submission</h1>
+
+      <form>
+        <input type="file" id="assignmentFile" />
+        <br>
+        <button type="button" id="uploadButton">Upload</button>
+      </form>
+
+      <div id="analysis">
+        <p><b>Status:</b> <span id="status"></span></p>
+        <p>Filename: <span id="filename"></span></p>
+        <p>Name: <span id="name"></span><br>
+          Shield ID: <span id="ShieldID"></span></p>
+        <hr>
+        <div id="questions"><p><b>Questions:</b></p></div>
+      </div>
+    </div>
+  </body>
+</html>
